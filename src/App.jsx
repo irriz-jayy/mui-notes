@@ -1,15 +1,19 @@
-import "./App.css";
+import React from "react";
+import { Route, Routes } from "react-router-dom";
+import Notes from "./pages/Notes";
 
-function App() {
+const App = () => {
   return (
     <>
       <div>
-        <h1>
-          <em>Mui practice</em>
-        </h1>
+        <h1>App</h1>
       </div>
+      <Routes>
+        <Route exact path="/" element={<Notes />} />
+        <Route path="/create-note" />
+      </Routes>
     </>
   );
-}
+};
 
 export default App;
