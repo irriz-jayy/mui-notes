@@ -1,0 +1,20 @@
+* {
+  margin: 00;
+}
+
+.navbar {
+  min-height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+}
+
+.navbar-link {
+  margin: 2px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}

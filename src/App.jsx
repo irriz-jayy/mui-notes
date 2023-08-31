@@ -1,13 +1,12 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Notes from "./pages/Notes";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <>
-      <div>
-        <h1>App</h1>
-      </div>
+      <Navbar />
       <Routes>
         <Route exact path="/" element={<Notes />} />
         <Route path="/create-note" />
