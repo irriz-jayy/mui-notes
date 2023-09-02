@@ -22,3 +22,7 @@
 .navbar-link:hover {
   color: gray;
 }
+
+.create {
+  display: block;
+}
