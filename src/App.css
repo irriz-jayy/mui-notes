@@ -11,10 +11,14 @@
 }
 
 .navbar-link {
-  margin: 2px;
+  margin: 0 10px;
   width: 60px;
   text-align: center;
   text-decoration: none;
   color: black;
   font-family: "Times New Roman", Times, serif;
+}
+
+.navbar-link:hover {
+  color: gray;
 }
