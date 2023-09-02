@@ -5,9 +5,20 @@ import SendOutlinedIcon from "@mui/icons-material/SendOutlined";
 const Create = () => {
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
+  const [titleError, setTitleError] = useState(false);
+  const [detailsError, setDetailsError] = useState(false);
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTitleError(false);
+    setDetailsError(false);
+
+    if (title == "") {
+      setTitleError(true);
+    }
+    if (details == "") {
+      setDetailsError(true);
+    }
 
     if (title && details) {
       console.log(title, details);
@@ -33,6 +44,7 @@ const Create = () => {
             fullWidth
             required
             margin="normal"
+            error={titleError}
           />
           <TextField
             onChange={(e) => setDetails(e.target.value)}
@@ -43,6 +55,7 @@ const Create = () => {
             multiline
             rows="4"
             margin="normal"
+            error={detailsError}
           />
 
           <Button
