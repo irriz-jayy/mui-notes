@@ -1,6 +1,7 @@
 import { Container, Grid, Paper } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import NoteCard from "../components/NoteCard";
+import { Masonry } from "@mui/lab";
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);
@@ -23,13 +24,13 @@ const Notes = () => {
   return (
     <>
       <Container>
-        <Grid container spacing={3}>
+        <Masonry columns={4} spacing={2}>
           {notes.map((note) => (
-            <Grid item key={note.id} xs={12} sm={6} md={3}>
+            <Paper key={note.id}>
               <NoteCard note={note} handleDelete={handleDelete} />
-            </Grid>
+            </Paper>
           ))}
-        </Grid>
+        </Masonry>
       </Container>
     </>
   );
