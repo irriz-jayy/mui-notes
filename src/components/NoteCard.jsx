@@ -11,7 +11,7 @@ import React from "react";
 const NoteCard = ({ note, handleDelete }) => {
   return (
     <div>
-      <Card elevation>
+      <Card elevation={3}>
         <CardHeader
           action={
             <IconButton onClick={() => handleDelete(note.id)}>

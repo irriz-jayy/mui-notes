@@ -1,11 +1,13 @@
 import { AddCircleOutline, SubjectOutlined } from "@mui/icons-material";
 import {
+  AppBar,
   Box,
   Drawer,
   List,
   ListItem,
   ListItemIcon,
   ListItemText,
+  Toolbar,
   Typography,
 } from "@mui/material";
 import React from "react";
@@ -18,7 +20,7 @@ const Layout = ({ children }) => {
   const menuItems = [
     {
       text: "My notes",
-      icon: <SubjectOutlined color="seconndary" />,
+      icon: <SubjectOutlined color="secondary" />,
       path: "/",
     },
     {
@@ -30,6 +32,16 @@ const Layout = ({ children }) => {
 
   return (
     <>
+      <AppBar
+        sx={{
+          width: `calc(100% - ${drawerWidth}px)`,
+        }}
+        elevation={0}
+      >
+        <Toolbar>
+          <Typography variant="h6">Welcome to Jay's Notes website</Typography>
+        </Toolbar>
+      </AppBar>
       <Box sx={{ display: "flex" }}>
         {/* Drawer */}
         <Drawer
@@ -62,7 +74,18 @@ const Layout = ({ children }) => {
           </List>
         </Drawer>
 
-        <div>{children}</div>
+        {/* Content */}
+        <Box
+          component="main"
+          sx={{
+            flexGrow: 1,
+            padding: 3,
+          }}
+        >
+          {/* Use Toolbar for separation */}
+          <Toolbar />
+          {children}
+        </Box>
       </Box>
     </>
   );
