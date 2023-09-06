@@ -23,6 +23,12 @@
       "details": "Need to apply",
       "category": "work",
       "id": 4
+    },
+    {
+      "title": "Get paid by mum",
+      "details": "Ask mum for my money",
+      "category": "money",
+      "id": 5
     }
   ]
 }

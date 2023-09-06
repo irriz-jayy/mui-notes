@@ -10,6 +10,7 @@ import {
   Toolbar,
   Typography,
 } from "@mui/material";
+import { format } from "date-fns";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +40,9 @@ const Layout = ({ children }) => {
         elevation={0}
       >
         <Toolbar>
-          <Typography variant="h6">Welcome to Jay's Notes website</Typography>
+          <Typography>
+            Today is the {format(new Date(), "do MMMM Y")}
+          </Typography>
         </Toolbar>
       </AppBar>
       <Box sx={{ display: "flex" }}>
@@ -57,7 +60,9 @@ const Layout = ({ children }) => {
           anchor="left"
         >
           <div>
-            <Typography variant="h5">Jay's Notes</Typography>
+            <Typography variant="h5" align="center">
+              Jay's Notes
+            </Typography>
           </div>
 
           <List>
